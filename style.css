@@ -663,6 +663,27 @@ footer h2{
 
 }
 
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+
+.footer-links a{
+    color:#fff;
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,0.35);
+    padding:10px 18px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    background:rgba(255,255,255,0.1);
+}
+
 .footer-icons a{
 
     display:inline-flex;
