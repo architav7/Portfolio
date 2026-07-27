@@ -33,6 +33,26 @@ header{
     z-index:100;
 }
 
+.nav-wrap{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.menu-checkbox{
+    display:none;
+}
+
+.menu-toggle{
+    display:none;
+    cursor:pointer;
+    font-size:22px;
+    color:#333;
+    padding:10px;
+    border-radius:50%;
+    background:#fff6ef;
+}
+
 .logo{
 
     font-size:28px;
@@ -77,6 +97,8 @@ nav a:hover{
     cursor:pointer;
 
     transition:.3s;
+
+    text-decoration: none;
 }
 
 .btn:hover{
@@ -107,6 +129,11 @@ nav a:hover{
 
     color:white;
 }
+
+
+
+
+
 
 /* Hero */
 
@@ -768,6 +795,57 @@ nav{
 
 @media(max-width:768px){
 
+header{
+    flex-direction:row;
+    gap:15px;
+}
+
+.nav-wrap{
+    margin-left:auto;
+}
+
+.menu-toggle{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.nav-links{
+    position:absolute;
+    top:calc(100% + 12px);
+    right:0;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+    min-width:220px;
+    padding:18px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-8px);
+    pointer-events:none;
+    transition:.3s ease;
+}
+
+.menu-checkbox:checked ~ .nav-links{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+    pointer-events:auto;
+}
+
+.nav-links a{
+    margin:0;
+    padding:6px 0;
+}
+
+.header-btn{
+    display:none;
+}
+
 .hero-text h1{
 
     font-size:40px;
@@ -805,5 +883,7 @@ nav{
     flex-direction:column;
 
 }
+
+
 
 }
